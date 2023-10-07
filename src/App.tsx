@@ -1,12 +1,16 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import MainNavigator from './navigation/MainNavigator';
+import HomeNavigator from './navigation/HomeNavigator';
+import {Provider as PaperProvider} from 'react-native-paper';
+import {theme} from './components/Theme';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <MainNavigator />
-    </NavigationContainer>
+    <PaperProvider theme={theme}>
+      <NavigationContainer>
+        <HomeNavigator />
+      </NavigationContainer>
+    </PaperProvider>
   );
 };
 
