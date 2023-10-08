@@ -251,12 +251,12 @@ export default env => {
           '@react-navigation/native': {
             singleton: true,
             eager: STANDALONE,
-            requiredVersion: '6.0.13',
+            requiredVersion: '6.0.14',
           },
           '@react-navigation/native-stack': {
             singleton: true,
             eager: STANDALONE,
-            requiredVersion: '6.9.1',
+            requiredVersion: '6.9.2',
           },
           '@react-navigation/material-bottom-tabs': {
             singleton: true,

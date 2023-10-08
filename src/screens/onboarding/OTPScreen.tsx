@@ -4,6 +4,7 @@ import {StyleSheet, View, TextInput, SafeAreaView} from 'react-native';
 import {Text, Button} from 'react-native-paper';
 import {NavigationProp, ParamListBase} from '@react-navigation/native';
 import Header from '../../components/Header';
+import theme from '../../components/Theme';
 
 type OTPScreenProps = {
   navigation: NavigationProp<ParamListBase>;
@@ -87,7 +88,9 @@ const OTPScreen = ({navigation}: OTPScreenProps) => {
           <View style={styles.buttonContainer}>
             <Button
               mode="outlined"
+              textColor={theme.colors.primary}
               style={[
+                theme.styles.button,
                 styles.button,
                 {borderColor: '#fff', backgroundColor: '#fff'},
               ]}
@@ -96,7 +99,7 @@ const OTPScreen = ({navigation}: OTPScreenProps) => {
             </Button>
             <Button
               mode="contained"
-              style={styles.button}
+              style={[theme.styles.button]}
               onPress={() => navigation.navigate('BasicDetails')}>
               Next
             </Button>
