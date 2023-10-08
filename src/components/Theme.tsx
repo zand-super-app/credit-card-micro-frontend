@@ -5,7 +5,7 @@ const theme = {
   colors: {
     ...DefaultTheme.colors,
     primary: '#ff7f41',
-    background: '#f5f1f2',
+    background: '#ededed',
   },
   spacing: {
     small: 8,
@@ -25,11 +25,15 @@ const theme = {
     },
   },
   styles: {
+    safeAreContainer: {
+      flex: 1,
+      backgroundColor: '#ededed',
+    },
     container: {
       flex: 1,
       padding: 16,
       justifyContent: 'center',
-      backgroundColor: '#f5f1f2',
+      backgroundColor: '#ededed',
     },
     headingContainer: {
       marginBottom: 16,

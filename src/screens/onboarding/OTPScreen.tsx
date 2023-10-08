@@ -66,9 +66,9 @@ const OTPScreen = ({navigation}: OTPScreenProps) => {
 
   return (
     <>
-      <SafeAreaView style={{flex: 1}}>
+      <SafeAreaView style={theme.styles.safeAreContainer}>
         <Header title="One time password" />
-        <View style={styles.container}>
+        <View style={theme.styles.container}>
           <View style={styles.headingContainer}>
             <Text style={styles.pageTitle}>Enter OTP</Text>
 
@@ -110,13 +110,7 @@ const OTPScreen = ({navigation}: OTPScreenProps) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    justifyContent: 'center',
-    backgroundColor: '#f5f1f2',
-  },
+const styles = StyleSheet.create({  
   headingContainer: {
     marginBottom: 16,
     alignItems: 'center',

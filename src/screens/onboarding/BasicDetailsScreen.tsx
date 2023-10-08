@@ -32,10 +32,10 @@ const BasicDetailsScreen = ({navigation}: BasicDetailsScreenProps) => {
 
   return (
     <>
-      <SafeAreaView style={{flex: 1}}>
+      <SafeAreaView style={theme.styles.safeAreContainer}>
         <Header title="Basic Details" />
 
-        <View style={styles.container}>
+        <View style={theme.styles.container}>
           <View style={styles.headingContainer}>
             <Text style={styles.pageTitle}>Let's get started!</Text>
 
@@ -101,13 +101,7 @@ const BasicDetailsScreen = ({navigation}: BasicDetailsScreenProps) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    justifyContent: 'center',
-    backgroundColor: '#f5f1f2',
-  },
+const styles = StyleSheet.create({  
   headingContainer: {
     marginBottom: 16,
     alignItems: 'center',

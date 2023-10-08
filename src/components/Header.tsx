@@ -3,6 +3,7 @@ import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Text } from 'react-native-paper';
+import theme from './Theme';
 
 type HeaderProps = {
   title: string;
@@ -18,7 +19,7 @@ const Header = ({ title }: HeaderProps) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={handleBackPress}>
-        <Icon name="arrow-back" size={24} color="#ff7f41" />
+        <Icon name="arrow-back" size={24} color={theme.colors.primary} />
       </TouchableOpacity>
       <Text style={styles.title}>{title}</Text>
       <View style={{ width: 24 }} />
@@ -28,6 +29,7 @@ const Header = ({ title }: HeaderProps) => {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: theme.colors.background,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
