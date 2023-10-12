@@ -13,6 +13,8 @@ const BasicDetailsScreen = ({navigation}: BasicDetailsScreenProps) => {
   const [name, setName] = useState('');
   const [companyName, setCompanyName] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
+  const [email, setEmail] = useState('');
+
 
   const handleChangeName = (text: string) => {
     setName(text);
@@ -24,6 +26,10 @@ const BasicDetailsScreen = ({navigation}: BasicDetailsScreenProps) => {
 
   const handleChangeMobileNumber = (text: string) => {
     setMobileNumber(text);
+  };
+
+  const handleChangeEmail = (text: string) => {
+    setEmail(text);
   };
 
   const handleSubmit = () => {
@@ -69,6 +75,17 @@ const BasicDetailsScreen = ({navigation}: BasicDetailsScreenProps) => {
               autoComplete="off"
               keyboardType="phone-pad"
               label="Mobile Number"
+              value={mobileNumber}
+              onChangeText={handleChangeMobileNumber}
+              style={styles.input}
+              underlineColor="#fff"
+              underlineStyle={{width: 0}}
+            />
+            <TextInput
+              mode="flat"
+              autoComplete="off"
+              keyboardType="email-address"
+              label="Email"
               value={mobileNumber}
               onChangeText={handleChangeMobileNumber}
               style={styles.input}

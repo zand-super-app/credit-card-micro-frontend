@@ -21,7 +21,7 @@ const WelcomeScreen = ({navigation}: WelcomeScreenProps) => {
             }}
           />
           <Text style={styles.heading}>
-            Open a Zand Corporate banking account instantly! Please keep the
+            Apply for a Zand Corporate credit card instantly! Please keep the
             following documents ready.
           </Text>
         </View>
@@ -39,13 +39,13 @@ const WelcomeScreen = ({navigation}: WelcomeScreenProps) => {
             onPress={() => navigation.navigate('BasicDetails')}>
             Start
           </Button>
-          <Button
+          {/* <Button
             mode="outlined"
             textColor={theme.colors.primary}
             style={[theme.styles.outlineButton, {marginTop: 16}]}
             onPress={() => console.log('Exit')}>
             Back to main app
-          </Button>
+          </Button> */}
         </View>
       </View>
     </SafeAreaView>
